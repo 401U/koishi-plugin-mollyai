@@ -1,0 +1,43 @@
+{
+  "name": "koishi-plugin-mollyai",
+  "description": "Calls molly robot API for koishi",
+  "private": false,
+  "version": "1.0.0.alpha.1",
+  "author": "YehowahLiu <yewhoahliu@4o1.to>",
+  "maintainers": [
+    "YehowahLiu <yewhoahliu@4o1.to>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YehowahLiu/koishi-plugin-mollyai"
+  },
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {},
+  "keywords": [
+    "chatbot",
+    "koishi",
+    "plugin",
+    "molly"
+  ],
+  "peerDependencies": {
+    "koishi": "^4.9.9"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "koishi": {
+    "description": {
+      "zh": "为 koishi 调用茉莉机器人API",
+      "en": "Calls molly robot API for koishi"
+    },
+    "locales": [
+      "en", "zh"
+    ]
+  }
+}
