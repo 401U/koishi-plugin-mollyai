@@ -2,7 +2,7 @@
   "name": "koishi-plugin-mollyai",
   "description": "Calls molly robot API for koishi",
   "private": false,
-  "version": "1.0.0.alpha.1",
+  "version": "1.0.0",
   "author": "YehowahLiu <yewhoahliu@4o1.to>",
   "maintainers": [
     "YehowahLiu <yewhoahliu@4o1.to>"
@@ -37,7 +37,8 @@
       "en": "Calls molly robot API for koishi"
     },
     "locales": [
-      "en", "zh"
+      "en",
+      "zh"
     ]
   }
 }
