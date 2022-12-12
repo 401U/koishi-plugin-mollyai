@@ -65,7 +65,7 @@ async function handleResponse(ctx: Context, session: Session<never, never>, resp
 }
 
 export function apply(ctx: Context, config: Config) {
-  ctx.command('茉莉云设置').action(() => {
+  ctx.command('茉莉云设置', {authority: 4}).action(() => {
     return `API key: ${config.apiKey}\nAPI secret: ${config.apiSecret}`
   })
   const http = ctx.http.extend({
