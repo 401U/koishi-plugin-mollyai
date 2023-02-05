@@ -27,7 +27,7 @@ const asset_url = 'https://files.molicloud.com/'
 export const schema = Schema.object({
   apiKey: Schema.string().description('茉莉云的 Api key').required(),
   apiSecret: Schema.string().role('secret').required(),
-  botName: Schema.string().description('机器人名称').required()
+  botName: Schema.string().description('机器人名称').required(),
 })
 
 /**
@@ -49,9 +49,9 @@ function shouldReply(ctx: Context, session: Session<never, never>, config: Confi
  */
 async function handleResponse(ctx: Context, session: Session<never, never>, response: ApiResponse){
   if(response.code === '00000'){
-    ctx.logger('mollyai').info('api回复: ' + response.message)
+    ctx.logger('mollyai').info('收到 api 响应: ' + JSON.stringify(response))
     response.data.forEach( async reply => {
-      ctx.logger('mollyai').info('处理消息' + reply.content)
+      ctx.logger('mollyai').debug('响应消息为: ' + reply.content)
       switch (reply.typed) {
         case 1: // text
         case 8: //json
@@ -74,6 +74,8 @@ async function handleResponse(ctx: Context, session: Session<never, never>, resp
   }else if(response.code === 'C1001'){
     ctx.logger('mollyai').info('接口调用到达上限')
     await session.sendQueued('今天累了呢，明天再聊吧🥱')
+  }else{
+    ctx.logger('mollyai').warn('未知响应: ' + response.message)
   }
 }
 
@@ -93,7 +95,7 @@ export function apply(ctx: Context, config: Config) {
   // 监听聊天信息并按需回复
   ctx.middleware(async (session, next) => {
     if(!shouldReply(ctx, session, config)){
-      ctx.logger('mollyai').info('信息被忽略')
+      ctx.logger('mollyai').debug('收到消息，但是不应该回复')
       return next()
     };
     let requestData = JSON.stringify({
@@ -104,7 +106,7 @@ export function apply(ctx: Context, config: Config) {
       to: session.guildId,
       toName: session.guildName
     });
-    ctx.logger('mollyai').info("发出请求: " + requestData)
+    ctx.logger('mollyai').info("发起请求: " + requestData)
     http.post(api_url, requestData).then(response=>{
       // console.log(response)
       handleResponse(ctx, session, response)
