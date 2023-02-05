@@ -30,10 +30,23 @@ export const schema = Schema.object({
   botName: Schema.string().description('机器人名称').required()
 })
 
+/**
+ * 检查是否应该让机器人回复
+ * @param {Context} ctx 上下文
+ * @param {Session} session 会话
+ * @param {Config} config 配置
+**/
 function shouldReply(ctx: Context, session: Session<never, never>, config: Config){
+  // 发言人不是机器人，同时发言提及了机器人名称或@了机器人时，需要回复
   return !ctx.bots[session.uid] && (session.content.includes(config.botName) || session.parsed.appel)
 }
 
+/**
+ * 处理茉莉云 api 响应并在聊天中回复消息
+ * @param ctx 上下文
+ * @param session 会话
+ * @param response api响应
+ */
 async function handleResponse(ctx: Context, session: Session<never, never>, response: ApiResponse){
   if(response.code === '00000'){
     ctx.logger('mollyai').info('api回复: ' + response.message)
@@ -65,6 +78,7 @@ async function handleResponse(ctx: Context, session: Session<never, never>, resp
 }
 
 export function apply(ctx: Context, config: Config) {
+  // 允许管理员通过指令查看茉莉云的设置
   ctx.command('茉莉云设置', {authority: 4}).action(() => {
     return `API key: ${config.apiKey}\nAPI secret: ${config.apiSecret}`
   })
@@ -76,6 +90,7 @@ export function apply(ctx: Context, config: Config) {
     }
   })
 
+  // 监听聊天信息并按需回复
   ctx.middleware(async (session, next) => {
     if(!shouldReply(ctx, session, config)){
       ctx.logger('mollyai').info('信息被忽略')
