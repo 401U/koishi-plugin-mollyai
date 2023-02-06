@@ -27,7 +27,7 @@ const asset_url = 'https://files.molicloud.com/'
 export const schema = Schema.object({
   apiKey: Schema.string().description('茉莉云的 Api key').required(),
   apiSecret: Schema.string().role('secret').required(),
-  botName: Schema.string().description('机器人名称').required(),
+  botName: Schema.string().description('机器人名称, 提及此名称后触发回复, 为空则只响应at').required(),
 })
 
 /**
@@ -38,7 +38,14 @@ export const schema = Schema.object({
 **/
 function shouldReply(ctx: Context, session: Session<never, never>, config: Config){
   // 发言人不是机器人，同时发言提及了机器人名称或@了机器人时，需要回复
-  return !ctx.bots[session.uid] && (session.content.includes(config.botName) || session.parsed.appel)
+  if(ctx.bots[session.uid]) { // 发言人是机器人
+    return false
+  } else if (session.parsed.appel) { // at了机器人
+    return true
+  } else if(config.botName.trim() !== '' && session.content.includes(config.botName)) { // 提及了机器人名称
+    return true
+  }
+  return false
 }
 
 /**

@@ -19,7 +19,7 @@
 |:---:|:---:|:---:|:---:|
 |apiKey|ApiKey|`string`| |
 |apiSecret|ApiSecret |`string`| |
-|botName|机器人名称|`string`| 聊天中提及此名称会触发回复 |
+|botName|机器人名称|`string`| 聊天中提及此名称会触发回复, 设为空则只在机器人被`@`时才会回复 |
 
 ## 特别鸣谢
 
