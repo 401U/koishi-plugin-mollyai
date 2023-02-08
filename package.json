@@ -18,7 +18,9 @@
     "dist"
   ],
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "atsc -b"
+  },
   "keywords": [
     "chatbot",
     "koishi",
@@ -26,7 +28,7 @@
     "molly"
   ],
   "peerDependencies": {
-    "koishi": "^4.9.9"
+    "koishi": "^4.11.0"
   },
   "publishConfig": {
     "access": "public"
@@ -40,5 +42,8 @@
       "en",
       "zh"
     ]
+  },
+  "devDependencies": {
+    "atsc": "^1.2.2"
   }
 }

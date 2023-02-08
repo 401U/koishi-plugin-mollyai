@@ -1,4 +1,4 @@
-import { Context, Logger, Schema, segment, Session } from 'koishi'
+import { Context, Schema, Session, h } from 'koishi'
 
 export const name = 'mollyai'
 
@@ -21,8 +21,8 @@ interface ApiResponse{
   data?: Array<ApiData>
 }
 
-const api_url = 'https://api.mlyai.com/reply'
-const asset_url = 'https://files.molicloud.com/'
+const api_url: string = 'https://api.mlyai.com/reply'
+const asset_url: string = 'https://files.molicloud.com/'
 
 export const schema = Schema.object({
   apiKey: Schema.string().description('茉莉云的 Api key').required(),
@@ -31,7 +31,7 @@ export const schema = Schema.object({
 })
 
 /**
- * 检查是否应该让机器人回复
+ * 检查是否应该让机器人回复, 返回要让机器人回复的消息，如果不需要回复，则返回null
  * @param {Context} ctx 上下文
  * @param {Session} session 会话
  * @param {Config} config 配置
@@ -39,13 +39,13 @@ export const schema = Schema.object({
 function shouldReply(ctx: Context, session: Session<never, never>, config: Config){
   // 发言人不是机器人，同时发言提及了机器人名称或@了机器人时，需要回复
   if(ctx.bots[session.uid]) { // 发言人是机器人
-    return false
+    return null
   } else if (session.parsed.appel) { // at了机器人
-    return true
+    return session.parsed.content
   } else if(config.botName.trim() !== '' && session.content.includes(config.botName)) { // 提及了机器人名称
-    return true
+    return session.content.replace(RegExp(`^${config.botName}[, ，]+`), '')
   }
-  return false
+  return null
 }
 
 /**
@@ -54,7 +54,7 @@ function shouldReply(ctx: Context, session: Session<never, never>, config: Confi
  * @param session 会话
  * @param response api响应
  */
-async function handleResponse(ctx: Context, session: Session<never, never>, response: ApiResponse){
+async function handleResponse(ctx: Context, session: Session<never, never>, response: ApiResponse) {
   if(response.code === '00000'){
     ctx.logger('mollyai').info('收到 api 响应: ' + JSON.stringify(response))
     response.data.forEach( async reply => {
@@ -65,14 +65,14 @@ async function handleResponse(ctx: Context, session: Session<never, never>, resp
           await session.sendQueued(reply.content)
           break
         case 2: // image
-          await session.sendQueued(segment('image', {url: asset_url + reply.content}))
+          await session.sendQueued(h.image(asset_url + reply.content));
           break
         case 4: // audio
-          await session.sendQueued(segment('audio', {url: asset_url + reply.content}))
+          await session.sendQueued(h.audio(asset_url + reply.content))
           break
         case 3: //document
         case 9: // other file
-          await session.sendQueued(segment('file', {url: asset_url + reply.content}))
+          await session.sendQueued(h.file(asset_url + reply.content))
           break
         default:
           break
@@ -101,18 +101,19 @@ export function apply(ctx: Context, config: Config) {
 
   // 监听聊天信息并按需回复
   ctx.middleware(async (session, next) => {
-    if(!shouldReply(ctx, session, config)){
+    const parsedContent = shouldReply(ctx, session, config)
+    if(parsedContent === null) {
       ctx.logger('mollyai').debug('收到消息，但是不应该回复')
       return next()
-    };
+    }
     let requestData = JSON.stringify({
-      content: session.content,
+      content: parsedContent.trim(),
       type: session.subtype === 'group' ? 2 : 1,
       from: session.userId,
       fromName: session.username,
       to: session.guildId,
       toName: session.guildName
-    });
+    })
     ctx.logger('mollyai').info("发起请求: " + requestData)
     http.post(api_url, requestData).then(response=>{
       // console.log(response)
