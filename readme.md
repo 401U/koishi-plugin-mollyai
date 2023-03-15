@@ -27,4 +27,4 @@
 - [Koishi.js](https://koishi.chat)
 - 提出 issue 和 pr 的社区贡献者
 - 下列赞助商
-  [![赞助商](https://cdn.jsdelivr.net/gh/YehowahLiu/sponsors/sponsors.svg)](https://4o1.to/afdian)
+  [![赞助商](https://cdn.jsdelivr.net/gh/401U/sponsors/sponsors.svg)](https://4o1.to/afdian)

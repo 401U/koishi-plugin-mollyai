@@ -3,13 +3,13 @@
   "description": "Calls molly robot API for koishi",
   "private": false,
   "version": "1.1.0",
-  "author": "YehowahLiu <yewhoahliu@4o1.to>",
+  "author": "401Unauthorized <hi@4o1.to>",
   "maintainers": [
-    "YehowahLiu <yewhoahliu@4o1.to>"
+    "401Unauthorized <hi@4o1.to>"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/YehowahLiu/koishi-plugin-mollyai"
+    "url": "https://github.com/401U/koishi-plugin-mollyai"
   },
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -36,7 +36,7 @@
   "koishi": {
     "description": {
       "zh": "为 koishi 调用茉莉机器人API",
-      "en": "Calls molly robot API for koishi"
+      "en": "Call molly robot API for koishi"
     },
     "locales": [
       "en",
