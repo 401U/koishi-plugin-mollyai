@@ -6,6 +6,7 @@ export interface Config {
   apiKey: string
   apiSecret: string
   botName: string
+  replyAt: boolean
 }
 
 interface ApiData{
@@ -27,7 +28,8 @@ const asset_url: string = 'https://files.molicloud.com/'
 export const schema = Schema.object({
   apiKey: Schema.string().description('茉莉云的 Api key').required(),
   apiSecret: Schema.string().role('secret').required(),
-  botName: Schema.string().description('机器人名称, 提及此名称后触发回复, 为空则只响应at').required(),
+  botName: Schema.string().description('机器人名称, 提及此名称后会触发回复, 为空则跳过').required(),
+  replyAt: Schema.boolean().description('是否在at机器人后触发回复').default(true),
 })
 
 /**
@@ -40,7 +42,7 @@ function shouldReply(ctx: Context, session: Session<never, never>, config: Confi
   // 发言人不是机器人，同时发言提及了机器人名称或@了机器人时，需要回复
   if(ctx.bots[session.uid]) { // 发言人是机器人
     return null
-  } else if (session.parsed.appel) { // at了机器人
+  } else if (session.parsed.appel && config.replyAt) { // at了机器人且开启了at回复
     return session.parsed.content
   } else if(config.botName.trim() !== '' && session.content.includes(config.botName)) { // 提及了机器人名称
     return session.content.replace(RegExp(`^${config.botName}[, ，]+`), '')
