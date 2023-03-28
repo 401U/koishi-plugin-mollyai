@@ -1,10 +1,25 @@
-# koishi-plugin-mollyai
+<div align="center">
+  <div>
+    <a href="https://koishi.chat/" target="_blank">
+      <img width="80" src="https://koishi.chat/logo.png" alt="koishi-logo">
+    </a>
+    <img src="https://api.iconify.design/mi:add.svg" width="35" height="80">
+    <a href="https://mlyai.com/" target="_blank">
+      <img width="80" src="https://mlyai.com/favicon.jpg" alt="mollyai-logo">
+    </a>
+  </div>
 
-[![npm](https://img.shields.io/npm/v/koishi-plugin-mollyai?style=flat-square)](https://www.npmjs.com/package/koishi-plugin-mollyai) ![QQ群474722516](https://img.shields.io/badge/QQ群-474722516-blue) [![Kook](https://img.shields.io/badge/Kook-4o1.to-green)](https://4o1.to/kook)
+<h1 id="koishi">Koishi-plugin-molly</h1>
+
+[![npm](https://img.shields.io/npm/v/koishi-plugin-mollyai)](https://www.npmjs.com/package/koishi-plugin-mollyai) 
+![QQ群474722516](https://img.shields.io/badge/QQ群-474722516-blue) 
+[![Kook](https://img.shields.io/badge/Kook-4o1.to-green)](https://4o1.to/kook)
 
 为 koishi 调用茉莉机器人 API
 
-> 使用推荐代码 `401` 开通会员有八折优惠哦✨
+> ✨ 使用推荐代码 `401` 开通茉莉云会员有八折优惠哦 ✨
+
+</div>
 
 ## 响应条件
 
@@ -19,12 +34,9 @@
 |:---:|:---:|:---:|:---:|
 |apiKey|ApiKey|`string`| |
 |apiSecret|ApiSecret |`string`| |
-|botName|机器人名称|`string`| 聊天中提及此名称会触发回复, 设为空则只在机器人被`@`时才会回复 |
+|botName|机器人名称|`string`| 聊天中提及此名称会触发回复 |
+|replyAt|响应 `@`|`string`| 聊天中`@`机器人时会触发回复 |
 
 ## 特别鸣谢
 
-- [茉莉云](https://mly.app/)
-- [Koishi.js](https://koishi.chat)
-- 提出 issue 和 pr 的社区贡献者
-- 下列赞助商
-  [![赞助商](https://cdn.jsdelivr.net/gh/401U/sponsors/sponsors.svg)](https://4o1.to/afdian)
+[![赞助商](https://cdn.jsdelivr.net/gh/401U/static/sponsors/cn.svg)](https://4o1.to/afdian)
