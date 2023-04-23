@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "atsc": "^1.2.2",
-    "koishi": "^4.12.2",
-    "typescript": "^5.0.2"
+    "koishi": "^4.12.6",
+    "typescript": "^5.0.4"
   }
 }
