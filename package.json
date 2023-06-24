@@ -2,7 +2,7 @@
   "name": "koishi-plugin-mollyai",
   "description": "Calls molly robot API for koishi",
   "private": false,
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "401Unauthorized <hi@4o1.to>",
   "maintainers": [
     "401Unauthorized <hi@4o1.to>"
@@ -28,7 +28,7 @@
     "molly"
   ],
   "peerDependencies": {
-    "koishi": "^4.11.0"
+    "koishi": "^5.11.4"
   },
   "publishConfig": {
     "access": "public"
@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "atsc": "^1.2.2",
-    "koishi": "^4.12.6",
+    "koishi": "^5.11.4",
     "typescript": "^5.0.4"
   }
 }

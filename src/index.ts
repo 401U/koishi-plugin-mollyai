@@ -58,9 +58,9 @@ function shouldReply(ctx: Context, session: Session<never, never>, config: Confi
  */
 async function handleResponse(ctx: Context, session: Session<never, never>, response: ApiResponse) {
   if(response.code === '00000'){
-    ctx.logger('mollyai').info('收到 api 响应: ' + JSON.stringify(response))
+    ctx.logger('mollyai').debug('收到 api 响应: ' + JSON.stringify(response))
     response.data.forEach( async reply => {
-      ctx.logger('mollyai').debug('响应消息为: ' + reply.content)
+      ctx.logger('mollyai').info(`API -> ${session.username}: ${reply.content}`)
       switch (reply.typed) {
         case 1: // text
         case 8: //json
@@ -116,7 +116,8 @@ export function apply(ctx: Context, config: Config) {
       to: session.guildId,
       toName: session.guildName
     })
-    ctx.logger('mollyai').info("发起请求: " + requestData)
+    ctx.logger('mollyai').debug("发起请求: " + requestData)
+    ctx.logger('mollyai').info(`API <- ${session.username}: ${parsedContent.trim()}`)
     http.post(api_url, requestData).then(response=>{
       // console.log(response)
       handleResponse(ctx, session, response)
