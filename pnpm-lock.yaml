@@ -7,13 +7,13 @@ settings:
 devDependencies:
   atsc:
     specifier: ^1.2.2
-    version: 1.2.2(typescript@5.1.6)
+    version: 1.2.2(typescript@5.2.2)
   koishi:
     specifier: ^4.13.5
     version: 4.14.3
   typescript:
     specifier: ^5.0.4
-    version: 5.1.6
+    version: 5.2.2
 
 packages:
 
@@ -297,7 +297,7 @@ packages:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
     dev: true
 
-  /atsc@1.2.2(typescript@5.1.6):
+  /atsc@1.2.2(typescript@5.2.2):
     resolution: {integrity: sha512-43nvsnT1/wKINka5Uu6+FSp3ZwGZRkBdgKtbkwsONUOV5a7bYq7TQdlLo8UOVq37QXSuIXurVtu/aAY/BsT4jA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -306,8 +306,8 @@ packages:
     dependencies:
       globby: 11.1.0
       js-yaml: 4.1.0
-      tsconfig-utils: 3.0.0(typescript@5.1.6)
-      typescript: 5.1.6
+      tsconfig-utils: 3.0.0(typescript@5.2.2)
+      typescript: 5.2.2
     dev: true
 
   /axios@1.4.0:
@@ -1150,14 +1150,14 @@ packages:
       ieee754: 1.2.1
     dev: true
 
-  /tsconfig-utils@3.0.0(typescript@5.1.6):
+  /tsconfig-utils@3.0.0(typescript@5.2.2):
     resolution: {integrity: sha512-T4nYnWCm3qO6jVhfFnx8ghDq3oNWLmq4uAu30lJeFxUB52L3ms88xVf/YEL5y1OeFSj/1u39pkrRRmun2CxAgg==}
     peerDependencies:
       typescript: '*'
     dependencies:
       execa: 5.1.1
       json5: 2.2.3
-      typescript: 5.1.6
+      typescript: 5.2.2
       which-pm-runs: 1.1.0
     dev: true
 
@@ -1174,8 +1174,8 @@ packages:
       mime-types: 2.1.35
     dev: true
 
-  /typescript@5.1.6:
-    resolution: {integrity: sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==}
+  /typescript@5.2.2:
+    resolution: {integrity: sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
