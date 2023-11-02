@@ -10,7 +10,7 @@ devDependencies:
     version: 1.2.2(typescript@5.2.2)
   koishi:
     specifier: ^4.13.5
-    version: 4.14.6
+    version: 4.15.3
   typescript:
     specifier: ^5.0.4
     version: 5.2.2
@@ -20,6 +20,7 @@ packages:
   /@koa/router@10.1.1:
     resolution: {integrity: sha512-ORNjq5z4EmQPriKbR0ER3k4Gh7YGNhWDL7JBW+8wXDrHLbWYKYSJaOJ9aN06npF5tbTxe2JBOsurpJDAvjiXKw==}
     engines: {node: '>= 8.0.0'}
+    deprecated: '**IMPORTANT 10x+ PERFORMANCE UPGRADE**: Please upgrade to v12.0.1+ as we have fixed an issue with debuglog causing 10x slower router benchmark performance, see https://github.com/koajs/router/pull/173'
     dependencies:
       debug: 4.3.4
       http-errors: 1.8.1
@@ -30,15 +31,15 @@ packages:
       - supports-color
     dev: true
 
-  /@koishijs/core@4.14.6:
-    resolution: {integrity: sha512-w3NQn4Xe5TKLi2/ThmoFxkcYSGKk18s9k70XfEraOUPiJ0HdiTOmuUNekwPuw3bHxjLE9jPiXxn1dz/909/6tA==}
+  /@koishijs/core@4.15.3:
+    resolution: {integrity: sha512-WVCRy1BPPlyEmLVMPgO5nr+knPFmU7tfCP6CrwEKKAOjitQcKBWZfjT6dEOauSgAUI33sims5mafStZY6EMOLA==}
     dependencies:
       '@koishijs/i18n-utils': 1.0.0
-      '@koishijs/utils': 7.0.5
-      '@minatojs/core': 2.4.1
-      '@satorijs/core': 3.0.0-alpha.2
-      cordis: 2.8.8
-      cosmokit: 1.4.5
+      '@koishijs/utils': 7.1.1
+      '@minatojs/core': 2.4.3
+      '@satorijs/core': 3.1.1
+      cordis: 3.1.2
+      cosmokit: 1.5.1
       fastest-levenshtein: 1.0.16
     transitivePeerDependencies:
       - bufferutil
@@ -49,31 +50,31 @@ packages:
   /@koishijs/i18n-utils@1.0.0:
     resolution: {integrity: sha512-eCGDBg7KQLJ76G+h8NJ8QePDLyliQ9DDoM89g3xeEInLLv+Gh6VWHqpgCw2XkxFwI7zJfmG5nyJAS7H31rS/TQ==}
     dependencies:
-      cosmokit: 1.4.5
+      cosmokit: 1.5.1
     dev: true
 
-  /@koishijs/loader@4.1.6(@koishijs/core@4.14.6):
-    resolution: {integrity: sha512-PBy7xBIjMC/I1QEkiTpQJg6TGFnsZ6PNveVwKE/kLVuRfhz5ir/mgzEoqFjkStMtTveVpgTn43eki7p2bblWvw==}
+  /@koishijs/loader@4.2.3(@koishijs/core@4.15.3):
+    resolution: {integrity: sha512-ri6e0fgbphdplwSPaxi2ndYLNezdHsxDucsFtqPKpKcE9gbrgP5OHSA7phHEX74M1ezcchtXHkT/noTSFW7OdQ==}
     peerDependencies:
-      '@koishijs/core': 4.14.6
+      '@koishijs/core': 4.15.3
     dependencies:
-      '@koishijs/core': 4.14.6
+      '@koishijs/core': 4.15.3
       dotenv: 16.3.1
       js-yaml: 4.1.0
       ns-require: 1.1.4
     dev: true
 
-  /@koishijs/utils@7.0.5:
-    resolution: {integrity: sha512-ePsJ9P9c65xPcgoa8O1l/HbNLPyZeD82qtniOPU+JGqWfmD8aFUtppK02PunwZ4EwjHFCXxZe1jTHYmkPaq05A==}
+  /@koishijs/utils@7.1.1:
+    resolution: {integrity: sha512-BHohx0IQAzgCICLGVIbNnV6XbK8ApWz+67tKDxv2JLxxu4PUsqo9x6VqnIR5Pdm9IP7oc1GZbn6olU+gy0S+fA==}
     dependencies:
-      cosmokit: 1.4.5
+      cosmokit: 1.5.1
       inaba: 1.1.1
     dev: true
 
-  /@minatojs/core@2.4.1:
-    resolution: {integrity: sha512-QK3uX1o+SqckDffju1TQEveRj9UNGl1IPKei0lIrWWx7SXxJRy4seTsQ88z7uGssHIkNlv49/gm4oHGDSZf3vQ==}
+  /@minatojs/core@2.4.3:
+    resolution: {integrity: sha512-Vr+3KIAH0g8JA0o/HJrcTN0p7ePo4Cw0PhMsNUkEyBQTY0m8/amfeItiRGRTAL3rcKoGniBdwpYXV4qhft0/Ug==}
     dependencies:
-      cosmokit: 1.4.5
+      cosmokit: 1.5.1
     dev: true
 
   /@nodelib/fs.scandir@2.1.5:
@@ -97,16 +98,17 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@satorijs/core@3.0.0-alpha.2:
-    resolution: {integrity: sha512-5fC+1Vbc4VjKu3dH3B1fGsP1RiflIgzkNzBGDYzx4Sah5cjCmnOpWBhLrd7yv7ErBIQ/6TO8lIQY58jOvhVYsw==}
+  /@satorijs/core@3.1.1:
+    resolution: {integrity: sha512-QcBEFawDYjkDEqnYPaUkx1v1YUTd8j4rIyYYJ2SO3XKDRDqH0pFFD1IQAdpua3zRr3lm0UZiEpeY42SNXMld/A==}
     dependencies:
       '@satorijs/element': 2.5.1
-      cordis: 2.8.8
-      cordis-axios: 3.3.0(cordis@2.8.8)
-      cosmokit: 1.4.5
-      reggol: 1.5.1
-      schemastery: 3.13.0
-      ws: 8.13.0
+      '@satorijs/protocol': 1.1.1
+      cordis: 3.1.2
+      cordis-axios: 4.0.1
+      cosmokit: 1.5.1
+      reggol: 1.6.3
+      schemastery: 3.14.0
+      ws: 8.14.2
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -116,17 +118,42 @@ packages:
   /@satorijs/element@2.5.1:
     resolution: {integrity: sha512-R/5okdKCVGOoCclUbBZO87DMb3KPyVQmyNlMoT4nUAu8KWLfWgEKXbbiCFjda36BQ+CzsWr7UwFzWpluAJUIlQ==}
     dependencies:
-      cosmokit: 1.4.5
+      cosmokit: 1.5.1
     dev: true
 
-  /@satorijs/satori@3.0.0-alpha.2:
-    resolution: {integrity: sha512-SBBgJXHMNvptt9fd6Za3XjwuCAaQxIiTwNC/Ayo/OXu12+/G1wIixTQFeURyvPeUTYR+OFizeZCu+JbrpztihQ==}
+  /@satorijs/protocol@1.1.1:
+    resolution: {integrity: sha512-Xh/8Kq/7vLuPaH88UCcpqmYHWxWPZSVPjEYtZdNupME858/cqCu1kvCJpRVa9DGF9BxugZMnzj9yqXfV8tqhSg==}
+    dependencies:
+      '@satorijs/element': 2.5.1
+      cosmokit: 1.5.1
+    dev: true
+
+  /@satorijs/router@1.1.2(@satorijs/satori@3.1.1):
+    resolution: {integrity: sha512-J9EoXI06g/4nFwgP/Gd1cuikTGioQB+1SEk4xrTUv63dzneBfPdtWvTtanVNreaAYZT4z4aFf2BVY86wB8js7w==}
+    peerDependencies:
+      '@satorijs/satori': ^3.1.1
     dependencies:
       '@koa/router': 10.1.1
-      '@satorijs/core': 3.0.0-alpha.2
+      '@satorijs/satori': 3.1.1
       '@types/koa': 2.13.5
       '@types/koa__router': 12.0.0
-      '@types/ws': 8.5.5
+      '@types/ws': 8.5.8
+      koa: 2.14.2
+      koa-bodyparser: 4.4.1
+      parseurl: 1.3.3
+      path-to-regexp: 6.2.1
+      ws: 8.14.2
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+    dev: true
+
+  /@satorijs/satori@3.1.1:
+    resolution: {integrity: sha512-rO8n8Ca6f2Kuh3IWPmGiTxp0JaA2hh4iONZbjVfDO6BRm72Vnq+HhLuB3q8hjFMUwhzBVlCkBsT9p17zIyfTiw==}
+    dependencies:
+      '@satorijs/core': 3.1.1
+      '@types/ws': 8.5.8
       file-type: 16.5.4
       http-proxy-agent: 5.0.0
       https-proxy-agent: 5.0.1
@@ -135,7 +162,7 @@ packages:
       parseurl: 1.3.3
       path-to-regexp: 6.2.1
       socks-proxy-agent: 5.0.1
-      ws: 8.13.0
+      ws: 8.14.2
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -261,8 +288,8 @@ packages:
       '@types/node': 18.15.3
     dev: true
 
-  /@types/ws@8.5.5:
-    resolution: {integrity: sha512-lwhs8hktwxSjf9UaZ9tG5M03PGogvFaH8gUgLNbN9HKIg0dvv6q+gkSuJ8HN4/VbyxkuLzCjlN7GquQ0gUJfIg==}
+  /@types/ws@8.5.8:
+    resolution: {integrity: sha512-flUksGIQCnJd6sZ1l5dqCEG/ksaoAg/eUwiLAGTJQcfgvZJKF++Ta4bJA6A5aPSJmsr+xlseHn4KLgVlNnvPTg==}
     dependencies:
       '@types/node': 18.15.3
     dev: true
@@ -397,27 +424,24 @@ packages:
     resolution: {integrity: sha512-3DdaFaU/Zf1AnpLiFDeNCD4TOWe3Zl2RZaTzUvWiIk5ERzcCodOE20Vqq4fzCbNoHURFHT4/us/Lfq+S2zyY4w==}
     dev: true
 
-  /cordis-axios@3.3.0(cordis@2.8.8):
-    resolution: {integrity: sha512-+vohFPKADZVKDlLYFqF9iVwDcgSLI5vq6JvQKvuQ90nAIVuCx7kfXp1AfPSjSGrsZwH2yGa3ucIA+ZeaDN3hCA==}
-    peerDependencies:
-      cordis: ^2.8.7
+  /cordis-axios@4.0.1:
+    resolution: {integrity: sha512-RTeUBjBOfOlEP+pi9C8y6xFeZoAJFBzTqb6nz0D3R7o2lv0Sm90TrUkvTe+y4n7G6dLULyORYaVE1M4MnvlbKw==}
     dependencies:
       axios: 1.4.0
-      cordis: 2.8.8
-      cosmokit: 1.4.5
+      cosmokit: 1.5.1
       mime-db: 1.52.0
     transitivePeerDependencies:
       - debug
     dev: true
 
-  /cordis@2.8.8:
-    resolution: {integrity: sha512-z5Iuzw064lS0y7dJP1GFVaMphSbPvGJQwuvv/ZOZtYaeyb1DvYtNhc0i3xeL3lthVwZLQ2NRQGHLSEfQcDBURA==}
+  /cordis@3.1.2:
+    resolution: {integrity: sha512-toP+N0Pluc1WATosqrQeI9dMwIqN+00nalrwfWZtKF4QFVHE47GHryTYxa8lj1LmVNLOYud2pgfX/LyKuFECwQ==}
     dependencies:
-      cosmokit: 1.4.5
+      cosmokit: 1.5.1
     dev: true
 
-  /cosmokit@1.4.5:
-    resolution: {integrity: sha512-hu/c4LP9SWqdxC+VWBCPKW+vb78kh8TMEwERb1irCNKyiPQUGJDT1Hu8GrUM3X9Gd0HvQpbzGkEpGWFxFXREgQ==}
+  /cosmokit@1.5.1:
+    resolution: {integrity: sha512-+O6f3G5Wei8X65bVgXuOGDy5J8ksltGshMwWerE8ToG0hu3zQHw2Yvr22tHOibfU5z177+FCs7sorfG1E7HnuA==}
     dev: true
 
   /cross-spawn@7.0.3:
@@ -830,17 +854,17 @@ packages:
       - supports-color
     dev: true
 
-  /koishi@4.14.6:
-    resolution: {integrity: sha512-TjTm5WzmPBhgdpKlCFeIpXbOrIMw1ZEw5uWA/7Vg05XqkjZVJ6vZh3htRAb3clfk9J3Wrp5YmTtMgFo4N0MOng==}
+  /koishi@4.15.3:
+    resolution: {integrity: sha512-Bl0D7EvD+nkeN43D3YDmaqKiKfo84Cnu0GXP/+ZpLDe1AcBi6Ap+sPtVmZpwPZ4V7zw6F0ZwZGKK6PZ1NOBZWg==}
     hasBin: true
     dependencies:
-      '@koishijs/core': 4.14.6
-      '@koishijs/loader': 4.1.6(@koishijs/core@4.14.6)
-      '@koishijs/utils': 7.0.5
-      '@satorijs/satori': 3.0.0-alpha.2
+      '@koishijs/core': 4.15.3
+      '@koishijs/loader': 4.2.3(@koishijs/core@4.15.3)
+      '@koishijs/utils': 7.1.1
+      '@satorijs/router': 1.1.2(@satorijs/satori@3.1.1)
+      '@satorijs/satori': 3.1.1
       cac: 6.7.14
       kleur: 4.1.5
-      ns-require: 1.1.4
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -1004,10 +1028,10 @@ packages:
       readable-stream: 3.6.2
     dev: true
 
-  /reggol@1.5.1:
-    resolution: {integrity: sha512-ja51Miyx+jn2LF1WqoRJ2cz12KrZ0hA9UqL0yc+B1BknJ7xZDqK4Bx7ztKevW++M5Zs7YiaJiVh6EQOCr39jTA==}
+  /reggol@1.6.3:
+    resolution: {integrity: sha512-FjrGPK/Lq78oTb42N9DcuYRli95T0Bnqh1eIimLsYu2RhZdTYaLlXlLgQ6f5hpFf5rI35SgtkWX2DjqzvNUhsA==}
     dependencies:
-      cosmokit: 1.4.5
+      cosmokit: 1.5.1
       object-inspect: 1.12.3
       supports-color: 8.1.1
     dev: true
@@ -1031,10 +1055,10 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: true
 
-  /schemastery@3.13.0:
-    resolution: {integrity: sha512-iIii28CQY9cKcRlCpGRhUBOlkbnSW58CGCkc8u8ajaEjEwimyx8y+PYewwREQ0jYfuMbzCpCSWxCJFJjZtBoLw==}
+  /schemastery@3.14.0:
+    resolution: {integrity: sha512-nDDCJwpLyjOE/t/bgeh4JYOxfs4vItDtOIrdaJKqCW/fGnrJQr6SoUbI1mr5kyv25BVU1W3FdVCfeiu/xNTQ1g==}
     dependencies:
-      cosmokit: 1.4.5
+      cosmokit: 1.5.1
     dev: true
 
   /setprototypeof@1.2.0:
@@ -1207,8 +1231,8 @@ packages:
       isexe: 2.0.0
     dev: true
 
-  /ws@8.13.0:
-    resolution: {integrity: sha512-x9vcZYTrFPC7aSIbj7sRCYo7L/Xb8Iy+pW0ng0wt2vCJv7M9HOMy0UoN3rr+IFC7hb7vXoqS+P9ktyLLLhO+LA==}
+  /ws@8.14.2:
+    resolution: {integrity: sha512-wEBG1ftX4jcglPxgFCMJmZ2PLtSbJ2Peg6TmpJFTbe9GZYOQCDPdMYu/Tm0/bGZkw8paZnJY45J4K2PZrLYq8g==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
