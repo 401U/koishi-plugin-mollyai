@@ -10,24 +10,24 @@ devDependencies:
     version: 2.0.1(typescript@5.3.3)
   koishi:
     specifier: ^4.13.5
-    version: 4.16.6
+    version: 4.16.7
   typescript:
     specifier: ^5.0.4
     version: 5.3.3
 
 packages:
 
-  /@cordisjs/logger@0.1.3(cordis@3.6.1):
-    resolution: {integrity: sha512-ZHy7NL+VCsd9msEUZ6VHlfxxeZWDramMsNb54uQ+fwSySkX6WbRqHY3FE7aBVL8baJbZszWH8nKE4hZhRiWJSg==}
+  /@cordisjs/logger@0.1.4(cordis@3.6.1):
+    resolution: {integrity: sha512-kaqWbZnVXIdOYXTQ5+a1uxffVhoS/X9Fn8XW5ExKG1FLQ8lFEChpWUndtKtDG/L/FNsEXGZSxGcX/RwXe/c0XA==}
     peerDependencies:
-      cordis: ^3.4.0
+      cordis: ^3.6.1
     dependencies:
       cordis: 3.6.1
       reggol: 1.6.3
     dev: true
 
-  /@cordisjs/server@0.1.3:
-    resolution: {integrity: sha512-X+KemqFePHK2mzIajJSPo3yt/q8B5wE1KO5NnACvtjqTyhny+Lh1O+04kYsWL3nIWOxkg8Coz6nw7JK6WA+xNA==}
+  /@cordisjs/server@0.1.7:
+    resolution: {integrity: sha512-MvYPwzySTDMg7SSsbOg/l9RDMkQK2ii5zVOD1o8OqKxK42JbFSADbtxNNc88ll6RNEj9NxZaCFMAaHjEk5VPsg==}
     dependencies:
       '@koa/router': 10.1.1
       '@types/koa': 2.13.5
@@ -46,10 +46,10 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@cordisjs/timer@0.2.0(cordis@3.6.1):
-    resolution: {integrity: sha512-6FHNKI9f5y1GskvWm0l6XxkFNi8wswnLwNbTOCeSLQ9oZwx8d9WjE+sQENqN6egkLo5QmMQE+0D8TwU5/WkMxg==}
+  /@cordisjs/timer@0.2.3(cordis@3.6.1):
+    resolution: {integrity: sha512-To16dij3rP/rZI3pLtB4jRPpHODw1oPNC49vGiQQV2lafUExLRRGI3wiGqyOTSokoU00s768ZOl5kD4Uu1Ri7g==}
     peerDependencies:
-      cordis: ^3.5.1
+      cordis: ^3.6.1
     dependencies:
       cordis: 3.6.1
     dev: true
@@ -68,13 +68,13 @@ packages:
       - supports-color
     dev: true
 
-  /@koishijs/core@4.16.6:
-    resolution: {integrity: sha512-A2VdhatRd9J/wJWLEuDfBMwzkyxygObImsbq8rGLnngXw3Rhmm3ZdVRSARJlKFQvqh1d4KVAvU6ET+oRfLOvyA==}
+  /@koishijs/core@4.16.7:
+    resolution: {integrity: sha512-lUUCQHX1HBY0qAiLd8uGxmOjb8wqTYFsKZh7vgXrL2X1in3wy+iLYuZGj3kdn7rc6Mqfv4oPNftQuXMqg7N/AQ==}
     dependencies:
       '@koishijs/i18n-utils': 1.0.1
       '@koishijs/utils': 7.1.2
       '@minatojs/core': 2.8.1
-      '@satorijs/core': 3.4.2
+      '@satorijs/core': 3.4.5
       cordis: 3.6.1
       cosmokit: 1.5.2
       fastest-levenshtein: 1.0.16
@@ -90,24 +90,24 @@ packages:
       cosmokit: 1.5.2
     dev: true
 
-  /@koishijs/loader@4.4.2(@koishijs/core@4.16.6):
-    resolution: {integrity: sha512-BqzZ+0zUODSalqCoeuoM4HK+4NxHSXAS8OvPOUR1smo9qdsiivntwM9K9o60tjya+5Y370BO2Y5iy/JYOcIwKQ==}
+  /@koishijs/loader@4.4.3(@koishijs/core@4.16.7):
+    resolution: {integrity: sha512-xkREcDDFCQV+wfbluOobRqs4IgSLHAWrOveefSQwIpaVn3TSlFV0BI8XZrpvLxPlPfRwgTZawbtqeF/h2gmBrA==}
     peerDependencies:
-      '@koishijs/core': 4.16.6
+      '@koishijs/core': 4.16.7
     dependencies:
-      '@koishijs/core': 4.16.6
+      '@koishijs/core': 4.16.7
       dotenv: 16.3.1
       js-yaml: 4.1.0
       ns-require: 1.1.4
     dev: true
 
-  /@koishijs/plugin-server@3.1.3(koishi@4.16.6):
-    resolution: {integrity: sha512-dggnYv3CYSEiur3qhmfJvooQzvziwfo343NjAvX6aDsEQIpeWi2VRJ9RCXpid6Vuq9kOt3QW5vC7MCm307z1vg==}
+  /@koishijs/plugin-server@3.1.7(koishi@4.16.7):
+    resolution: {integrity: sha512-TTSkblyYJbmSo03S7kDONOn7hgd7SVk9+tN8VLeB4jDQIPWyW4ThAzhhjcjrSn/DcvA0PUCHzMdlUBrWkSMkyw==}
     peerDependencies:
-      koishi: ^4.16.0
+      koishi: ^4.16.7
     dependencies:
-      '@cordisjs/server': 0.1.3
-      koishi: 4.16.6
+      '@cordisjs/server': 0.1.7
+      koishi: 4.16.7
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -148,15 +148,15 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@satorijs/core@3.4.2:
-    resolution: {integrity: sha512-TQRnlEWrXImbkck7wyeeT6eIXppLZOvK/NwK37VurGLsIoEKRWth8pt5GgJE87KdOSB6L2/H4Vr0eKoSI8xrQQ==}
+  /@satorijs/core@3.4.5:
+    resolution: {integrity: sha512-uMWYCic1ipunm/iCCK7avPyyvl7x+0H7noBN0v0rMSEjGqXRnwV7S9wJYeMltwRvqeS5GpBVvFt/RhAyYBtu7A==}
     dependencies:
-      '@cordisjs/logger': 0.1.3(cordis@3.6.1)
-      '@cordisjs/timer': 0.2.0(cordis@3.6.1)
-      '@satorijs/element': 3.1.3
-      '@satorijs/protocol': 1.2.0
+      '@cordisjs/logger': 0.1.4(cordis@3.6.1)
+      '@cordisjs/timer': 0.2.3(cordis@3.6.1)
+      '@satorijs/element': 3.1.4
+      '@satorijs/protocol': 1.2.1
       cordis: 3.6.1
-      cordis-axios: 4.0.2
+      cordis-axios: 4.0.3
       cosmokit: 1.5.2
       schemastery: 3.14.3
       ws: 8.14.2
@@ -166,23 +166,23 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@satorijs/element@3.1.3:
-    resolution: {integrity: sha512-As+4GkEESUlovevEkohoouFP22uR/weCS/xZ99AWpJa9l+v4uzNmDCsMl6UAFJXXY58vkeQEteBW8MqOhCAUvw==}
+  /@satorijs/element@3.1.4:
+    resolution: {integrity: sha512-7Fu4upmzAtU23hWG6LhMKbnO5WMyFPuV10XPCm1QfJtW0JHFlZwWsVwxMPmEp9Uxmw4x4+qWr/4V7HDa3tK5uQ==}
     dependencies:
       cosmokit: 1.5.2
     dev: true
 
-  /@satorijs/protocol@1.2.0:
-    resolution: {integrity: sha512-90atkYb6N3VUOw9HCod/Z9p626WDeUgkrUY4loZlrAPc3RdEDn7pXa27rJ38kNZT9m53/z5c3AL0LBUc2NVUkA==}
+  /@satorijs/protocol@1.2.1:
+    resolution: {integrity: sha512-WIOlxlXhmHl2IJKtA22RdbpLnfRd5R6LAdMnXiLkxJaJ6Iq2X/fqhgEap0PyslZUYW8AYkv29aBuzpq1RIj2LQ==}
     dependencies:
-      '@satorijs/element': 3.1.3
+      '@satorijs/element': 3.1.4
       cosmokit: 1.5.2
     dev: true
 
-  /@satorijs/satori@3.4.2:
-    resolution: {integrity: sha512-5sBGUk8fMfh/k+NXmSSA+kROokS460K+HrIlrz+XLl6F3IDqgM/We/N7ve46EYtkcGZJx1wJykO5t8h/sJAxoA==}
+  /@satorijs/satori@3.4.5:
+    resolution: {integrity: sha512-Zw+4JbU3WrU0sNkOrSvib7ggvMi5PvGZ82dSAlH8ECaznSrOsBPKf6uchFGewAhf3NTfBAy+J0hdy/DuFVk5yg==}
     dependencies:
-      '@satorijs/core': 3.4.2
+      '@satorijs/core': 3.4.5
       '@types/ws': 8.5.10
       file-type: 16.5.4
       http-proxy-agent: 5.0.0
@@ -453,8 +453,8 @@ packages:
     resolution: {integrity: sha512-3DdaFaU/Zf1AnpLiFDeNCD4TOWe3Zl2RZaTzUvWiIk5ERzcCodOE20Vqq4fzCbNoHURFHT4/us/Lfq+S2zyY4w==}
     dev: true
 
-  /cordis-axios@4.0.2:
-    resolution: {integrity: sha512-l21RRk7tzzHEtU4DTYeRZOFEWziEG9hDeclLmvSYetyv27nPnHqU5JKZeThQ/PJkjj16X0oHdz2AHa39Aa2SXQ==}
+  /cordis-axios@4.0.3:
+    resolution: {integrity: sha512-xx4xuCsDbdW1uLrS3HI+QxPUc0qa5UNGt5dAgT8qEWYra4AxVsbfmoFsC+scTh7NGkiGNx4F8NoxxBn4EOSWuQ==}
     dependencies:
       axios: 1.6.5
       cosmokit: 1.5.2
@@ -840,15 +840,15 @@ packages:
       - supports-color
     dev: true
 
-  /koishi@4.16.6:
-    resolution: {integrity: sha512-PddeuNYoZrVIF9zQ9jjF6VJcKDhL/0MidUMXZGIyibNnhRI2xcW5I79h+QPx1pwVGPrWh9qJFCqY7Tpn943wgw==}
+  /koishi@4.16.7:
+    resolution: {integrity: sha512-pDprEUsDKAisW/i+hhjbZ0DvTLC0NtcqhgSNLw4rWRHL6/8/lW5L/heN474sRDIYIZdEG5QLG2R456FUOoTvQw==}
     hasBin: true
     dependencies:
-      '@koishijs/core': 4.16.6
-      '@koishijs/loader': 4.4.2(@koishijs/core@4.16.6)
-      '@koishijs/plugin-server': 3.1.3(koishi@4.16.6)
+      '@koishijs/core': 4.16.7
+      '@koishijs/loader': 4.4.3(@koishijs/core@4.16.7)
+      '@koishijs/plugin-server': 3.1.7(koishi@4.16.7)
       '@koishijs/utils': 7.1.2
-      '@satorijs/satori': 3.4.2
+      '@satorijs/satori': 3.4.5
       cac: 6.7.14
       kleur: 4.1.5
     transitivePeerDependencies:
