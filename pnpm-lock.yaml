@@ -76,11 +76,6 @@ packages:
       cosmokit: 1.5.2
     dev: true
 
-  /@fastify/busboy@2.1.0:
-    resolution: {integrity: sha512-+KpH+QxZU7O4675t3mnkQKcZZg56u+K/Ct2K+N2AZYNVK8kyeo/bI18tI8aPm3tvNNRyTWfj6s5tnGNlcbQRsA==}
-    engines: {node: '>=14'}
-    dev: true
-
   /@koa/router@10.1.1:
     resolution: {integrity: sha512-ORNjq5z4EmQPriKbR0ER3k4Gh7YGNhWDL7JBW+8wXDrHLbWYKYSJaOJ9aN06npF5tbTxe2JBOsurpJDAvjiXKw==}
     engines: {node: '>= 8.0.0'}
@@ -1113,11 +1108,9 @@ packages:
     hasBin: true
     dev: true
 
-  /undici@6.6.2:
-    resolution: {integrity: sha512-vSqvUE5skSxQJ5sztTZ/CdeJb1Wq0Hf44hlYMciqHghvz+K88U0l7D6u1VsndoFgskDcnU+nG3gYmMzJVzd9Qg==}
+  /undici@6.11.1:
+    resolution: {integrity: sha512-KyhzaLJnV1qa3BSHdj4AZ2ndqI0QWPxYzaIOio0WzcEJB9gvuysprJSLtpvc2D9mhR9jPDUk7xlJlZbH2KR5iw==}
     engines: {node: '>=18.0'}
-    dependencies:
-      '@fastify/busboy': 2.1.0
     dev: true
 
   /undios-file@0.1.2(cordis@3.13.4)(undios@0.3.2):
@@ -1144,7 +1137,7 @@ packages:
       https-proxy-agent: 7.0.2
       socks: 2.7.1
       socks-proxy-agent: 8.0.2
-      undici: 6.6.2
+      undici: 6.11.1
       undios: 0.3.2(cordis@3.13.4)
     transitivePeerDependencies:
       - supports-color
