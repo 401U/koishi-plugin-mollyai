@@ -7,13 +7,13 @@ settings:
 devDependencies:
   atsc:
     specifier: ^2.0.1
-    version: 2.0.1(typescript@5.4.4)
+    version: 2.0.1(typescript@5.4.5)
   koishi:
     specifier: ^4.13.5
     version: 4.17.3(cordis@3.13.4)(undios@0.3.2)
   typescript:
     specifier: ^5.0.4
-    version: 5.4.4
+    version: 5.4.5
 
 packages:
 
@@ -360,7 +360,7 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /atsc@2.0.1(typescript@5.4.4):
+  /atsc@2.0.1(typescript@5.4.5):
     resolution: {integrity: sha512-Jx8kwClLs2u0YWsJmMhgt9GWAcZXTOKDXtTgc8hkxl9i1c3x1rJDRlt+jp+t/gAIHfw8YPrM71xJzzif6FoERw==}
     hasBin: true
     peerDependencies:
@@ -368,8 +368,8 @@ packages:
     dependencies:
       globby: 11.1.0
       js-yaml: 4.1.0
-      tsconfig-utils: 4.0.3(typescript@5.4.4)
-      typescript: 5.4.4
+      tsconfig-utils: 4.0.3(typescript@5.4.5)
+      typescript: 5.4.5
     dev: true
 
   /braces@3.0.2:
@@ -1080,13 +1080,13 @@ packages:
       ieee754: 1.2.1
     dev: true
 
-  /tsconfig-utils@4.0.3(typescript@5.4.4):
+  /tsconfig-utils@4.0.3(typescript@5.4.5):
     resolution: {integrity: sha512-t4eCGw23P3HtyCaRN4d3+pwhZSonbVs3nh9qPCqTJCFbXg6RUgxISNoXHmSci0/Qx6Ujj8A9zf73waD5Bl1EwQ==}
     peerDependencies:
       typescript: '*'
     dependencies:
       json5: 2.2.3
-      typescript: 5.4.4
+      typescript: 5.4.5
     dev: true
 
   /tsscmp@1.0.6:
@@ -1102,8 +1102,8 @@ packages:
       mime-types: 2.1.35
     dev: true
 
-  /typescript@5.4.4:
-    resolution: {integrity: sha512-dGE2Vv8cpVvw28v8HCPqyb08EzbBURxDpuhJvTrusShUfGnhHBafDsLdS1EhhxyL6BJQE+2cT3dDPAv+MQ6oLw==}
+  /typescript@5.4.5:
+    resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
