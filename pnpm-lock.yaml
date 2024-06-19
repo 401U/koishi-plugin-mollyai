@@ -7,7 +7,7 @@ settings:
 devDependencies:
   atsc:
     specifier: ^2.0.1
-    version: 2.0.1(typescript@5.4.5)
+    version: 2.1.0(typescript@5.4.5)
   koishi:
     specifier: ^4.13.5
     version: 4.17.7(@cordisjs/plugin-http@0.4.2)(cordis@3.15.3)
@@ -410,15 +410,15 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /atsc@2.0.1(typescript@5.4.5):
-    resolution: {integrity: sha512-Jx8kwClLs2u0YWsJmMhgt9GWAcZXTOKDXtTgc8hkxl9i1c3x1rJDRlt+jp+t/gAIHfw8YPrM71xJzzif6FoERw==}
+  /atsc@2.1.0(typescript@5.4.5):
+    resolution: {integrity: sha512-0B2DzsN+PRsRvUZV+e1NQtUV08DoBxdTvXrYt1MP+0VcqsfIVz0lIT0GKMr9u5FXj81OVee1RTwXOpsUvmieEQ==}
     hasBin: true
     peerDependencies:
       typescript: '*'
     dependencies:
       globby: 11.1.0
       js-yaml: 4.1.0
-      tsconfig-utils: 4.0.3(typescript@5.4.5)
+      tsconfig-utils: 4.0.5(typescript@5.4.5)
       typescript: 5.4.5
     dev: true
 
@@ -1145,8 +1145,8 @@ packages:
       ieee754: 1.2.1
     dev: true
 
-  /tsconfig-utils@4.0.3(typescript@5.4.5):
-    resolution: {integrity: sha512-t4eCGw23P3HtyCaRN4d3+pwhZSonbVs3nh9qPCqTJCFbXg6RUgxISNoXHmSci0/Qx6Ujj8A9zf73waD5Bl1EwQ==}
+  /tsconfig-utils@4.0.5(typescript@5.4.5):
+    resolution: {integrity: sha512-7vPbECJ28MS1c5ABiVCbG8GPcIoQ2edjMJAF2GLNan4C7c/hbyCWNZvQb5sSTQ5mmi0VVH3taSDIQ7Ape7XwQA==}
     peerDependencies:
       typescript: '*'
     dependencies:
