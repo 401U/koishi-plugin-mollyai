@@ -52,7 +52,7 @@ packages:
       cosmokit: 1.6.2
       file-type: 16.5.4
       mime-db: 1.52.0
-      ws: 8.16.0
+      ws: 8.17.1
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -67,7 +67,7 @@ packages:
       cosmokit: 1.6.2
       file-type: 16.5.4
       mime-db: 1.52.0
-      ws: 8.16.0
+      ws: 8.17.1
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -107,7 +107,7 @@ packages:
       path-to-regexp: 6.2.1
       reggol: 1.6.3
       schemastery: 3.14.6
-      ws: 8.16.0
+      ws: 8.17.1
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -1192,8 +1192,8 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /ws@8.16.0:
-    resolution: {integrity: sha512-HS0c//TP7Ina87TfiPUz1rQzMhHrl/SG2guqRcTOIUYD2q8uhUdNHZYJUaQ8aTGPzCh+c6oawMKW35nFl1dxyQ==}
+  /ws@8.17.1:
+    resolution: {integrity: sha512-6XQFvXTkbfUOZOKKILFG1PDK2NDQs4azKQl26T0YS5CxqWLgXajbPZ+h4gZekJyRqFU8pvnbAbbs/3TgRPy+GQ==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
