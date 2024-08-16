@@ -10,13 +10,13 @@ importers:
     devDependencies:
       atsc:
         specifier: ^2.0.1
-        version: 2.1.0(typescript@5.4.5)
+        version: 2.1.0(typescript@5.5.4)
       koishi:
         specifier: ^4.13.5
         version: 4.17.11(@cordisjs/plugin-http@0.6.1(cordis@3.17.9))(cordis@3.17.9)
       typescript:
         specifier: ^5.0.4
-        version: 5.4.5
+        version: 5.5.4
 
 packages:
 
@@ -639,8 +639,8 @@ packages:
     resolution: {integrity: sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==}
     engines: {node: '>= 0.6'}
 
-  typescript@5.4.5:
-    resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
+  typescript@5.5.4:
+    resolution: {integrity: sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -958,12 +958,12 @@ snapshots:
 
   asap@2.0.6: {}
 
-  atsc@2.1.0(typescript@5.4.5):
+  atsc@2.1.0(typescript@5.5.4):
     dependencies:
       globby: 11.1.0
       js-yaml: 4.1.0
-      tsconfig-utils: 4.0.5(typescript@5.4.5)
-      typescript: 5.4.5
+      tsconfig-utils: 4.0.5(typescript@5.5.4)
+      typescript: 5.5.4
 
   braces@3.0.3:
     dependencies:
@@ -1407,10 +1407,10 @@ snapshots:
       '@tokenizer/token': 0.3.0
       ieee754: 1.2.1
 
-  tsconfig-utils@4.0.5(typescript@5.4.5):
+  tsconfig-utils@4.0.5(typescript@5.5.4):
     dependencies:
       json5: 2.2.3
-      typescript: 5.4.5
+      typescript: 5.5.4
 
   tsscmp@1.0.6: {}
 
@@ -1419,7 +1419,7 @@ snapshots:
       media-typer: 0.3.0
       mime-types: 2.1.35
 
-  typescript@5.4.5: {}
+  typescript@5.5.4: {}
 
   undici@6.11.1: {}
 
