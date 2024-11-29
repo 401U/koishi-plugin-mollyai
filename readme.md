@@ -40,3 +40,8 @@
 ## 特别鸣谢
 
 [![赞助商](https://cdn.jsdelivr.net/gh/401U/static/sponsors/cn.svg)](https://4o1.to/afdian)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2F401U%2Fkoishi-plugin-mollyai.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2F401U%2Fkoishi-plugin-mollyai?ref=badge_shield)
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2F401U%2Fkoishi-plugin-mollyai.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2F401U%2Fkoishi-plugin-mollyai?ref=badge_large)
